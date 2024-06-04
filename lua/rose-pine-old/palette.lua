@@ -2,7 +2,6 @@ local options = require('rose-pine-old.config').options
 
 local variants = {
 	main = {
-		---@deprecated for backwards compatibility
 		_experimental_nc = '#16141f',
 		nc = '#16141f',
 		base = '#191724',
@@ -11,7 +10,6 @@ local variants = {
 		muted = '#6e6a86',
 		subtle = '#908caa',
 		text = '#e0def4',
-		-- text = '#919191',
 		love = '#eb6f92',
 		gold = '#f6c177',
 		rose = '#ebbcba',

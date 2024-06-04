@@ -312,27 +312,6 @@ function M._load(options)
 		['LspCodeLens'] = { fg = p.subtle }, -- virtual text of code len
 		['LspCodeLensSeparator'] = { fg = p.highlight_high }, -- separator between two or more code len
 
-		-- romgrk/barbar.nvim
-		['BufferCurrent'] = { fg = p.text, bg = p.overlay },
-		['BufferCurrentIndex'] = { fg = p.text, bg = p.overlay },
-		['BufferCurrentMod'] = { fg = p.foam, bg = p.overlay },
-		['BufferCurrentSign'] = { fg = p.subtle, bg = p.overlay },
-		['BufferCurrentTarget'] = { fg = p.gold, bg = p.overlay },
-		['BufferInactive'] = { fg = p.subtle },
-		['BufferInactiveIndex'] = { fg = p.subtle },
-		['BufferInactiveMod'] = { fg = p.foam },
-		['BufferInactiveSign'] = { fg = p.muted },
-		['BufferInactiveTarget'] = { fg = p.gold },
-		['BufferTabpageFill'] = {
-			fg = groups.background,
-			bg = groups.background,
-		},
-		['BufferVisible'] = { fg = p.subtle },
-		['BufferVisibleIndex'] = { fg = p.subtle },
-		['BufferVisibleMod'] = { fg = p.foam },
-		['BufferVisibleSign'] = { fg = p.muted },
-		['BufferVisibleTarget'] = { fg = p.gold },
-
 		-- lewis6991/gitsigns.nvim
 		['GitSignsAdd'] = { fg = groups.git_add, bg = groups.background },
 		['GitSignsChange'] = { fg = groups.git_change, bg = groups.background },
@@ -340,12 +319,6 @@ function M._load(options)
 		['SignAdd'] = { link = 'GitSignsAdd' },
 		['SignChange'] = { link = 'GitSignsChange' },
 		['SignDelete'] = { link = 'GitSignsDelete' },
-
-		-- mvllow/modes.nvim
-		['ModesCopy'] = { bg = p.gold },
-		['ModesDelete'] = { bg = p.love },
-		['ModesInsert'] = { bg = p.foam },
-		['ModesVisual'] = { bg = p.iris },
 
 		-- kyazdani42/nvim-tree.lua
 		['NvimTreeEmptyFolderName'] = { fg = p.muted },
@@ -390,14 +363,6 @@ function M._load(options)
 		['WhichKeyFloat'] = { bg = maybe.surface },
 		['WhichKeyValue'] = { fg = p.rose },
 
-		-- luka-reineke/indent-blankline.nvim
-		['IndentBlanklineChar'] = { fg = p.muted, nocombine = true },
-		['IndentBlanklineSpaceChar'] = { fg = p.muted, nocombine = true },
-		['IndentBlanklineSpaceCharBlankline'] = {
-			fg = p.muted,
-			nocombine = true,
-		},
-
 		-- hrsh7th/nvim-cmp
 		['CmpItemAbbr'] = { fg = p.subtle },
 		['CmpItemAbbrDeprecated'] = { fg = p.subtle, strikethrough = true },
@@ -410,89 +375,6 @@ function M._load(options)
 		['CmpItemKindMethod'] = { fg = p.iris },
 		['CmpItemKindSnippet'] = { fg = p.gold },
 		['CmpItemKindVariable'] = { fg = p.text },
-
-		-- TimUntersberger/neogit
-		['NeogitDiffAddHighlight'] = { fg = p.foam, bg = p.highlight_med },
-		['NeogitDiffContextHighlight'] = { bg = p.highlight_low },
-		['NeogitDiffDeleteHighlight'] = { fg = p.love, bg = p.highlight_med },
-		['NeogitHunkHeader'] = { bg = p.highlight_low },
-		['NeogitHunkHeaderHighlight'] = { bg = p.highlight_low },
-
-		-- vimwiki/vimwiki
-		['VimwikiHR'] = { fg = p.subtle },
-		['VimwikiHeader1'] = { fg = groups.headings.h1, bold = true },
-		['VimwikiHeader2'] = { fg = groups.headings.h2, bold = true },
-		['VimwikiHeader3'] = { fg = groups.headings.h3, bold = true },
-		['VimwikiHeader4'] = { fg = groups.headings.h4, bold = true },
-		['VimwikiHeader5'] = { fg = groups.headings.h5, bold = true },
-		['VimwikiHeader6'] = { fg = groups.headings.h6, bold = true },
-		['VimwikiHeaderChar'] = { fg = p.pine },
-		['VimwikiLink'] = { fg = groups.link, underline = true },
-		['VimwikiList'] = { fg = p.iris },
-		['VimwikiNoExistsLink'] = { fg = p.love },
-
-		-- nvim-neorg/neorg
-		['NeorgHeading1Prefix'] = { fg = groups.headings.h1, bold = true },
-		['NeorgHeading1Title'] = { link = 'NeorgHeading1Prefix' },
-		['NeorgHeading2Prefix'] = { fg = groups.headings.h2, bold = true },
-		['NeorgHeading2Title'] = { link = 'NeorgHeading2Prefix' },
-		['NeorgHeading3Prefix'] = { fg = groups.headings.h3, bold = true },
-		['NeorgHeading3Title'] = { link = 'NeorgHeading3Prefix' },
-		['NeorgHeading4Prefix'] = { fg = groups.headings.h4, bold = true },
-		['NeorgHeading4Title'] = { link = 'NeorgHeading4Prefix' },
-		['NeorgHeading5Prefix'] = { fg = groups.headings.h5, bold = true },
-		['NeorgHeading5Title'] = { link = 'NeorgHeading5Prefix' },
-		['NeorgHeading6Prefix'] = { fg = groups.headings.h6, bold = true },
-		['NeorgHeading6Title'] = { link = 'NeorgHeading6Prefix' },
-		['NeorgMarkerTitle'] = { fg = p.text, bold = true },
-
-		-- tami5/lspsaga.nvim (fork of glepnir/lspsaga.nvim)
-		['DefinitionCount'] = { fg = p.rose },
-		['DefinitionIcon'] = { fg = p.rose },
-		['DefintionPreviewTitle'] = { fg = p.rose, bold = true },
-		['LspFloatWinBorder'] = { fg = groups.border },
-		['LspFloatWinNormal'] = { bg = maybe.surface },
-		['LspSagaAutoPreview'] = { fg = p.subtle },
-		['LspSagaCodeActionBorder'] = { fg = groups.border },
-		['LspSagaCodeActionContent'] = { fg = p.foam },
-		['LspSagaCodeActionTitle'] = { fg = p.gold, bold = true },
-		['LspSagaCodeActionTruncateLine'] = { link = 'LspSagaCodeActionBorder' },
-		['LspSagaDefPreviewBorder'] = { fg = groups.border },
-		['LspSagaDiagnosticBorder'] = { fg = groups.border },
-		['LspSagaDiagnosticHeader'] = { fg = p.gold, bold = true },
-		['LspSagaDiagnosticTruncateLine'] = { link = 'LspSagaDiagnosticBorder' },
-		['LspSagaDocTruncateLine'] = { link = 'LspSagaHoverBorder' },
-		['LspSagaFinderSelection'] = { fg = p.gold },
-		['LspSagaHoverBorder'] = { fg = groups.border },
-		['LspSagaLspFinderBorder'] = { fg = groups.border },
-		['LspSagaRenameBorder'] = { fg = p.pine },
-		['LspSagaRenamePromptPrefix'] = { fg = p.love },
-		['LspSagaShTruncateLine'] = { link = 'LspSagaSignatureHelpBorder' },
-		['LspSagaSignatureHelpBorder'] = { fg = p.pine },
-		['ReferencesCount'] = { fg = p.rose },
-		['ReferencesIcon'] = { fg = p.rose },
-		['SagaShadow'] = { bg = p.overlay },
-		['TargetWord'] = { fg = p.iris },
-
-		-- ray-x/lsp_signature.nvim
-		['LspSignatureActiveParameter'] = { bg = p.overlay },
-
-		-- rlane/pounce.nvim
-		['PounceAccept'] = { fg = p.love, bg = p.highlight_high },
-		['PounceAcceptBest'] = { fg = p.base, bg = p.gold },
-		['PounceGap'] = { link = 'Search' },
-		['PounceMatch'] = { link = 'Search' },
-
-		-- ggandor/leap.nvim
-		['LeapMatch'] = { link = 'MatchParen' },
-		['LeapLabelPrimary'] = { link = 'IncSearch' },
-		['LeapLabelSecondary'] = { fg = p.base, bg = p.pine },
-
-		-- phaazon/hop.nvim
-		['HopNextKey'] = { fg = p.love },
-		['HopNextKey1'] = { fg = p.foam },
-		['HopNextKey2'] = { fg = p.pine },
-		['HopUnmatched'] = { fg = p.highlight_high },
 
 		-- nvim-telescope/telescope.nvim
 		['TelescopeBorder'] = { fg = groups.border, bg = float_background },
@@ -542,73 +424,10 @@ function M._load(options)
 		['DapUIDecoration'] = { link = 'DapUIBreakpointsPath' },
 		['DapUIModifiedValue'] = { fg = p.foam, bold = true },
 
-		-- glepnir/dashboard-nvim
-		['DashboardShortcut'] = { fg = p.love },
-		['DashboardHeader'] = { fg = p.pine },
-		['DashboardCenter'] = { fg = p.gold },
-		['DashboardFooter'] = { fg = p.iris },
-
-		-- SmiteshP/nvim-navic
-		['NavicIconsFile'] = { fg = p.base },
-		['NavicIconsModule'] = { fg = p.rose },
-		['NavicIconsNamespace'] = { fg = p.base },
-		['NavicIconsPackage'] = { fg = p.base },
-		['NavicIconsClass'] = { fg = p.foam },
-		['NavicIconsMethod'] = { fg = p.iris },
-		['NavicIconsProperty'] = { fg = p.foam },
-		['NavicIconsField'] = { fg = p.foam },
-		['NavicIconsConstructor'] = { fg = p.gold },
-		['NavicIconsEnum'] = { fg = p.gold },
-		['NavicIconsInterface'] = { fg = p.foam },
-		['NavicIconsFunction'] = { fg = p.pine },
-		['NavicIconsVariable'] = { fg = p.text },
-		['NavicIconsConstant'] = { fg = p.gold },
-		['NavicIconsString'] = { fg = p.gold },
-		['NavicIconsNumber'] = { fg = p.gold },
-		['NavicIconsBoolean'] = { fg = p.rose },
-		['NavicIconsArray'] = { fg = p.gold },
-		['NavicIconsObject'] = { fg = p.gold },
-		['NavicIconsKey'] = { fg = p.iris },
-		['NavicIconsKeyword'] = { fg = p.pine },
-		['NavicIconsNull'] = { fg = p.love },
-		['NavicIconsEnumMember'] = { fg = p.foam },
-		['NavicIconsStruct'] = { fg = p.foam },
-		['NavicIconsEvent'] = { fg = p.gold },
-		['NavicIconsOperator'] = { fg = p.subtle },
-		['NavicIconsTypeParameter'] = { fg = p.foam },
-		['NavicText'] = { fg = p.subtle },
-		['NavicSeparator'] = { fg = p.subtle },
-
-		-- folke/noice.nvim
-		['NoiceCursor'] = { fg = p.highlight_high, bg = p.text },
-
 		-- echasnovski/mini.indentscope
 		['MiniIndentscopeSymbol'] = { fg = p.highlight_med },
 		['MiniIndentscopeSymbolOff'] = { fg = p.highlight_med },
-
-		-- goolord/alpha-nvim
-		['AlphaHeader'] = { fg = p.pine },
-		['AlphaButtons'] = { fg = p.foam },
-		['AlphaShortcut'] = { fg = p.rose },
-		['AlphaFooter'] = { fg = p.gold },
 	}
-
-	-- vim.g.terminal_color_0 = p.overlay -- black
-	-- vim.g.terminal_color_8 = p.subtle -- bright black
-	-- vim.g.terminal_color_1 = p.love -- red
-	-- vim.g.terminal_color_9 = p.love -- bright red
-	-- vim.g.terminal_color_2 = p.pine -- green
-	-- vim.g.terminal_color_10 = p.pine -- bright green
-	-- vim.g.terminal_color_3 = p.gold -- yellow
-	-- vim.g.terminal_color_11 = p.gold -- bright yellow
-	-- vim.g.terminal_color_4 = p.foam -- blue
-	-- vim.g.terminal_color_12 = p.foam -- bright blue
-	-- vim.g.terminal_color_5 = p.iris -- magenta
-	-- vim.g.terminal_color_13 = p.iris -- bright magenta
-	-- vim.g.terminal_color_6 = p.rose -- cyan
-	-- vim.g.terminal_color_14 = p.rose -- bright cyan
-	-- vim.g.terminal_color_7 = p.text -- white
-	-- vim.g.terminal_color_15 = p.text -- bright white
 
 	-- Set users highlight_group customisations.
 	for group, opts in pairs(options.highlight_groups) do
